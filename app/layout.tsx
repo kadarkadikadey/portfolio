@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   title: "KARTIKEY", // Updated from your placeholder
   description: "Portfolio of Kartikey - .NET, Flutter, and AI Integration specialist.",
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/portfolio/icon.png",
+    shortcut: "/portfolio/icon.png",
+    apple: "/portfolio/icon.png",
   }
 };
 
