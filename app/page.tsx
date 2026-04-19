@@ -154,12 +154,12 @@ export default function Home() {
 
   // Array to keep the code clean
   const techStack = [
-    { src: "/C-sharp.svg.png", alt: "C-sharp" },
-    { src: "/Microsoft_.NET.svg.png", alt: "Microsoft_.NET" },
-    { src: "/Google-flutter.svg.png", alt: "Google-flutter" },
-    { src: "/Nextjs.svg.png", alt: "Nextjs" },
-    { src: "/Python.svg.webp", alt: "Python" },
-    { src: "/Typescript.svg.png", alt: "Typescript" },
+    { src: "/portfolio/C-sharp.svg.png", alt: "C-sharp" },
+    { src: "/portfolio/Microsoft_.NET.svg.png", alt: "Microsoft_.NET" },
+    { src: "/portfolio/Google-flutter.svg.png", alt: "Google-flutter" },
+    { src: "/portfolio/Nextjs.svg.png", alt: "Nextjs" },
+    { src: "/portfolio/Python.svg.webp", alt: "Python" },
+    { src: "/portfolio/Typescript.svg.png", alt: "Typescript" },
   ];
 
   return (
