@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
   },
   // If your GitHub repo name is NOT your username (e.g., "my-portfolio"), 
   // uncomment the line below and put your repo name there:
-  // basePath: '/portfolio', 
+  // basePath: '/portfolio',
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
 };
 
 export default nextConfig;
