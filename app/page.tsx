@@ -5,20 +5,26 @@ import Image from 'next/image';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5'; // Make sure to npm install react-icons
 import SmoothScroll from "./components/SmoothScroll";
+import mypic1 from "../public/my-pic.png";
+import mypic2 from "../public/my-pic2.jpeg";
+import mypic3 from "../public/my-pic3.jpg";
+
+
+
 
 const myProjects = [
   {
     id: 1,
     title: "powpad",
     description: "Integrating Gemini AI and GROQ into a global hotkey for instant answers for Every text editer.",
-    video: "/powpad.mp4",
+    video: "/portfolio/powpad.mp4",
     color: "#00d4ff"
   },
   {
     id: 2,
     title: "meowpad",
     description: "Integrating Gemini AI into a global hotkey notepad for instant answers.",
-    video: "/meowpad.mp4",
+    video: "/portfolio/meowpad.mp4",
     color: "#00d4ff"
   },
   {
@@ -26,7 +32,7 @@ const myProjects = [
     title: "citizen-107",
 
     description: "Community emergency response platform connecting individuals with nearby volunteers and medical aid.",
-    video: "/CITIZEN-107.mp4", // Replace with your actual video path
+    video: "/portfolio/CITIZEN-107.mp4", // Replace with your actual video path
     color: "#ff4b2b"
   },
   {
@@ -34,7 +40,7 @@ const myProjects = [
     title: "catsoftshop",
 
     description: "A full-stack marketplace for software assets, scripts, and UI kits built with .NET and Flutter.",
-    video: "/catsoftshop.mp4", // Replace with your actual video path
+    video: "/portfolio/catsoftshop.mp4", // Replace with your actual video path
     color: "#6a11cb"
   },
   {
@@ -42,7 +48,7 @@ const myProjects = [
     title: "chatmeat",
 
     description: "Real-time messaging platform focused on seamless connectivity and modern UI/UX.",
-    video: "/chatmate.mp4", // Replace with your actual video path
+    video: "/portfolio/chatmate.mp4", // Replace with your actual video path
     color: "#00f2fe"
   },
   {
@@ -50,7 +56,7 @@ const myProjects = [
     title: "rodegard",
 
     description: "A specialized platform exploring the deep lore and character backgrounds of Elden Ring.",
-    video: "/RodeGard.mp4", // Replace with your actual video path
+    video: "/portfolio/RodeGard.mp4", // Replace with your actual video path
     color: "#f9d423"
   }
 ];
@@ -217,7 +223,7 @@ export default function Home() {
             <div className="w-full md:w-[40%] relative h-[60vh] md:h-screen bg-zinc-100 border-l-[1px] border-black/10">
 
               <Image
-                src="/my-pic.png"
+                src={mypic1}
                 alt="Kartikey"
                 fill
                 className="object-cover object-top md:object-center"
@@ -249,7 +255,7 @@ export default function Home() {
                 {/* Image 1 (Primary) */}
                 <div className="absolute top-0 left-0 w-64 h-80 border-2 border-white z-10 overflow-hidden">
                   <Image
-                    src="/my-pic3.jpg"
+                    src={mypic3}
                     alt="Kartikey working"
                     fill
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
@@ -262,7 +268,7 @@ export default function Home() {
                 {/* Image 2 (Secondary/Action Shot) */}
                 <div className="absolute bottom-0 right-0 w-64 h-80 border-2 border-white z-10 overflow-hidden">
                   <Image
-                    src="/my-pic2.jpeg"
+                    src={mypic2}
                     alt="Kartikey coding"
                     fill
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
