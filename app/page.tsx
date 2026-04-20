@@ -27,37 +27,46 @@ const myProjects = [
     video: "/portfolio/meowpad.mp4",
     color: "#00d4ff"
   },
+ 
+];
+const myProjects1 = [
   {
-    id: 3,
+    id: 1,
     title: "citizen-107",
-
     description: "Community emergency response platform connecting individuals with nearby volunteers and medical aid.",
     video: "/portfolio/CITIZEN-107.mp4", // Replace with your actual video path
     color: "#ff4b2b"
   },
   {
-    id: 4,
+    id: 2,
     title: "catsoftshop",
-
     description: "A full-stack marketplace for software assets, scripts, and UI kits built with .NET and Flutter.",
     video: "/portfolio/catsoftshop.mp4", // Replace with your actual video path
     color: "#6a11cb"
   },
   {
-    id: 5,
+    id: 3,
     title: "chatmeat",
-
     description: "Real-time messaging platform focused on seamless connectivity and modern UI/UX.",
     video: "/portfolio/chatmate.mp4", // Replace with your actual video path
     color: "#00f2fe"
   },
-  {
-    id: 6,
-    title: "rodegard",
 
+];
+const myProjects2 = [
+  
+  {
+    id: 1,
+    title: "rodegard",
     description: "A specialized platform exploring the deep lore and character backgrounds of Elden Ring.",
     video: "/portfolio/RodeGard.mp4", // Replace with your actual video path
     color: "#f9d423"
+  }, {
+    id: 2,
+    title: "catsoftshop",
+    description: "A full-stack marketplace for software assets, scripts, and UI kits built with .NET and Flutter.",
+    video: "/portfolio/catsoftshop_webview.mp4", // Replace with your actual video path
+    color: "#6a11cb"
   }
 ];
 
@@ -148,18 +157,27 @@ export const Reveal = ({ children, width = "100%" }: RevealProps) => {
 export default function Home() {
 
   const [index, setIndex] = useState(0);
+  const [index1, setIndex1] = useState(0);
+  const [index2, setIndex2] = useState(0);
 
   const nextProject = () => setIndex((prev) => (prev + 1) % myProjects.length);
   const prevProject = () => setIndex((prev) => (prev - 1 + myProjects.length) % myProjects.length);
 
+  const nextProject1 = () => setIndex1((prev) => (prev + 1) % myProjects1.length);
+  const prevProject1 = () => setIndex1((prev) => (prev - 1 + myProjects1.length) % myProjects1.length);
+
+  const nextProject2 = () => setIndex2((prev) => (prev + 1) % myProjects2.length);
+  const prevProject2 = () => setIndex2((prev) => (prev - 1 + myProjects2.length) % myProjects2.length);
+
+
   // Array to keep the code clean
   const techStack = [
-    { src: "/portfolio/C-Sharp.svg.png", alt: "C-sharp" },
-    { src: "/portfolio/Microsoft_.NET.svg.png", alt: "Microsoft_.NET" },
-    { src: "/portfolio/Google-flutter.svg.png", alt: "Google-flutter" },
-    { src: "/portfolio/Nextjs.svg.png", alt: "Nextjs" },
-    { src: "/portfolio/Python.svg.webp", alt: "Python" },
-    { src: "/portfolio/Typescript.svg.png", alt: "Typescript" },
+    { src: "/C-sharp.svg.png", alt: "C-sharp" },
+    { src: "/Microsoft_.NET.svg.png", alt: "Microsoft_.NET" },
+    { src: "/Google-flutter.svg.png", alt: "Google-flutter" },
+    { src: "/Nextjs.svg.png", alt: "Nextjs" },
+    { src: "/Python.svg.webp", alt: "Python" },
+    { src: "/Typescript.svg.png", alt: "Typescript" },
   ];
 
   return (
@@ -306,6 +324,7 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <div className="bg-white py-10 px-10 md:px-20 border-b-2 border-black">
+
             {/* Small top label */}
             <div className="flex items-center gap-3 mb-4">
               <div className="w-4 h-4 bg-black flex items-center justify-center">
@@ -315,43 +334,46 @@ export default function Home() {
                 Our Featured Projects
               </p>
             </div>
-            {/* Change flex-col to items-center to center children horizontally */}
-            <div className="flex flex-col items-center gap-4 w-full">
 
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center">
-                Projects fully crafted
-                <span className="relative inline-block ml-4 text-pink-300 italic">
-                  by meself <ScribbleUnderline />
-                </span>
-                <HouseCheckIcon />
-              </h2>
+            <Reveal>
 
-              {/* Added justify-center to ensure the row itself is centered */}
-              <div className="flex items-center justify-center gap-6 text-black mt-2 w-full">
-                <button
-                  onClick={prevProject}
-                  className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
-                >
-                  ←
-                </button>
+              {/* Change flex-col to items-center to center children horizontally */}
+              <div className="flex flex-col items-center gap-4 w-full">
 
-                <span className="font-mono text-xl font-bold min-w-[120px] text-center">
-                  0{index + 1} / 0{myProjects.length}
-                </span>
+                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center">
+                  Projects fully crafted With
+                  <span className="relative inline-block ml-4 text-pink-300 italic">
+                    .NET <ScribbleUnderline />
+                  </span>
+                  <HouseCheckIcon />
+                </h2>
 
-                <button
-                  onClick={nextProject}
-                  className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
-                >
-                  →
-                </button>
+                {/* Added justify-center to ensure the row itself is centered */}
+                <div className="flex items-center justify-center gap-6 text-black mt-2 w-full">
+                  <button
+                    onClick={prevProject}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    ←
+                  </button>
+
+                  <span className="font-mono text-xl font-bold min-w-[120px] text-center">
+                    0{index + 1} / 0{myProjects.length}
+                  </span>
+
+                  <button
+                    onClick={nextProject}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    →
+                  </button>
+                </div>
               </div>
-            </div>
 
-
+            </Reveal>
           </div>
-
         </Reveal>
+
         <Reveal>
           <section className="relative h-screen w-full bg-[#f0f0f0] overflow-hidden flex flex-col md:flex-row border-t-4 border-black">
 
@@ -413,6 +435,216 @@ export default function Home() {
             </div>
           </section>
         </Reveal>
+                {/* second one */}
+         <Reveal>
+          <div className="bg-white py-10 px-10 md:px-20 border-b-2 border-black">
+
+            <Reveal>
+
+              {/* Change flex-col to items-center to center children horizontally */}
+              <div className="flex flex-col items-center gap-4 w-full">
+
+                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center">
+                  Projects fully crafted With
+                  <span className="relative inline-block ml-4 text-pink-300 italic">
+                     Flutter <ScribbleUnderline />
+                  </span>
+                  <HouseCheckIcon />
+                </h2>
+
+                {/* Added justify-center to ensure the row itself is centered */}
+                <div className="flex items-center justify-center gap-6 text-black mt-2 w-full">
+                  <button
+                    onClick={prevProject1}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    ←
+                  </button>
+
+                  <span className="font-mono text-xl font-bold min-w-[120px] text-center">
+                    0{index1 + 1} / 0{myProjects1.length}
+                  </span>
+
+                  <button
+                    onClick={nextProject1}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+
+            </Reveal>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <section className="relative h-screen w-full bg-[#f0f0f0] overflow-hidden flex flex-col md:flex-row border-t-4 border-black">
+
+            {/* LEFT WHITE PANEL: Project Details */}
+            <div className="w-full md:w-1/3 bg-white h-full p-12 flex flex-col justify-center z-20 border-r-2 border-black">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={myProjects1[index1].id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="uppercase font-bold text-pink-500 mb-2">Project {index1 + 1}</p>
+                  <h2 className="text-5xl font-black uppercase leading-none mb-6">
+                    {myProjects1[index1].title}
+                  </h2>
+                  <p className="text-gray-600 mb-8 font-medium">
+                    {myProjects1[index1].description}
+
+                  </p>
+
+                </motion.div>
+              </AnimatePresence>
+
+
+            </div>
+
+            {/* RIGHT PANEL: Video/Media Player */}
+            <div className="w-full md:w-2/3 h-full relative bg-black overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={myProjects1[index1].id}
+                  initial={{ x: "100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "-100%" }}
+                  transition={{ type: "spring", damping: 20, stiffness: 100 }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  {/* VIDEO ELEMENT */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-80"
+                    src={myProjects1[index1].video}
+                  />
+
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* SIDEBAR TEXT (Rotated) */}
+            <div className="hidden md:block absolute left-4 bottom-20 -rotate-90 origin-left z-30">
+              <p className="text-[10px] font-black uppercase tracking-widest text-black/20">
+                Crafted by Kartikey — 2026
+              </p>
+            </div>
+          </section>
+        </Reveal>
+                {/* thered one */}
+         <Reveal>
+          <div className="bg-white py-10 px-10 md:px-20 border-b-2 border-black">
+
+            <Reveal>
+
+              {/* Change flex-col to items-center to center children horizontally */}
+              <div className="flex flex-col items-center gap-4 w-full">
+
+                <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-center">
+                  Projects fully crafted With
+                  <span className="relative inline-block ml-4 text-pink-300 italic">
+                    NEXT.JS <ScribbleUnderline />
+                  </span>
+                  <HouseCheckIcon />
+                </h2>
+
+                {/* Added justify-center to ensure the row itself is centered */}
+                <div className="flex items-center justify-center gap-6 text-black mt-2 w-full">
+                  <button
+                    onClick={prevProject2}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    ←
+                  </button>
+
+                  <span className="font-mono text-xl font-bold min-w-[120px] text-center">
+                    0{index2 + 1} / 0{myProjects2.length}
+                  </span>
+
+                  <button
+                    onClick={nextProject2}
+                    className="text-3xl hover:text-pink-500 hover:scale-110 transition-all cursor-pointer outline-none"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+
+            </Reveal>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <section className="relative h-screen w-full bg-[#f0f0f0] overflow-hidden flex flex-col md:flex-row border-t-4 border-black">
+
+            {/* LEFT WHITE PANEL: Project Details */}
+            <div className="w-full md:w-1/3 bg-white h-full p-12 flex flex-col justify-center z-20 border-r-2 border-black">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={myProjects2[index2].id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <p className="uppercase font-bold text-pink-500 mb-2">Project {index2 + 1}</p>
+                  <h2 className="text-5xl font-black uppercase leading-none mb-6">
+                    {myProjects2[index2].title}
+                  </h2>
+                  <p className="text-gray-600 mb-8 font-medium">
+                    {myProjects2[index2].description}
+
+                  </p>
+
+                </motion.div>
+              </AnimatePresence>
+
+
+            </div>
+
+            {/* RIGHT PANEL: Video/Media Player */}
+            <div className="w-full md:w-2/3 h-full relative bg-black overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={myProjects2[index2].id}
+                  initial={{ x: "100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "-100%" }}
+                  transition={{ type: "spring", damping: 20, stiffness: 100 }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  {/* VIDEO ELEMENT */}
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-80"
+                    src={myProjects2[index2].video}
+                  />
+
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* SIDEBAR TEXT (Rotated) */}
+            <div className="hidden md:block absolute left-4 bottom-20 -rotate-90 origin-left z-30">
+              <p className="text-[10px] font-black uppercase tracking-widest text-black/20">
+                Crafted by Kartikey — 2026
+              </p>
+            </div>
+          </section>
+        </Reveal>
+
+
         <Reveal>
           <footer className="bg-white pt-32">
 
@@ -465,6 +697,6 @@ export default function Home() {
           </footer>
         </Reveal>
       </main>
-    </SmoothScroll>
+    </SmoothScroll >
   );
 }
