@@ -58,13 +58,13 @@ const myProjects2 = [
   {
     id: 1,
     title: "rodegard",
-    description: "A specialized platform exploring the deep lore and character backgrounds of Elden Ring.",
+    description: "A Car Repair Services That connect worker and user with middle man",
     video: "/portfolio/RodeGard.mp4", // Replace with your actual video path
     color: "#f9d423"
   }, {
     id: 2,
     title: "catsoftshop",
-    description: "A full-stack marketplace for software assets, scripts, and UI kits built with .NET and Flutter.",
+    description: "A full-stack marketplace Website for software assets, scripts, and UI kits built with NEXT.JS",
     video: "/portfolio/catsoftshop_webview.mp4", // Replace with your actual video path
     color: "#6a11cb"
   }
