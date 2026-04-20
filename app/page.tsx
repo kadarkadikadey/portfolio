@@ -677,7 +677,7 @@ export default function Home() {
 
                 {/* Logo Brand */}
                 <div className="bg-pink-300 text-black px-3 py-1 font-black text-xs leading-none uppercase rotate-[-5deg]">
-                  KARTIKEY
+                  PARMAR KARTIKEY 
                 </div>
 
                 {/* Copyright & Credits */}
